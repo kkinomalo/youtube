@@ -1,10 +1,24 @@
-# Python
-__pycache__/
-*.pyc
-.venv/
-webvenv/
+node_modules/
+.next/
+.vercel/
+out/
+dist/
+coverage/
+*.tsbuildinfo
 
-# Local model/runtime artifacts
+.DS_Store
+*.log
+npm-debug.log*
+
+.env
+.env.*
+!.env.example
+!apps/*/.env.example
+!packages/*/.env.example
+
+apps/api/public/generated/
+
+# Local AI/model/runtime artifacts
 local-llm/qwen_models/
 local-llm/piper/
 local-llm/tts_output/
@@ -15,17 +29,7 @@ local-llm/__pycache__/
 *.onnx
 *.gguf
 
-# Large/private challenge artifacts
+# Large/private local artifacts
 *.raw
-*.bin
-*.zip
 backup/
 extras/
-ctfd/
-board_activity_output/
-robocopy.log
-
-# Local secrets/config
-.env
-*.env
-zrok*.json
