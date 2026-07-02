@@ -4,13 +4,16 @@
 
 ## 내가 맡은 역할
 
-- 로컬 LLM/TTS API 구축 및 외부 배포
-- 음식/건강 숏츠 생성을 위한 AI 워크플로우 연동
-- zrok을 이용한 로컬 AI 서버 public URL 공유
-- Qwen3 기반 텍스트 생성 API 연결
-- Qwen3-TTS 기반 한국어 TTS API 테스트 및 연동
-- 풀스택 연동을 위한 API 명세 정리
-- 발표자료와 GitHub README 문서화
+- API 총괄 담당
+  - 로컬 LLM API와 프로젝트 API 서버 연동 구조 정리
+  - `/chat`, `/tts`, `/chat/tts`, `/v1/chat/completions` 등 주요 API 흐름 확인
+  - zrok을 이용한 로컬 API public URL 공유
+  - 풀스택 연동을 위한 API 명세 정리
+- TTS 담당
+  - Orpheus 3B Korean TTS 테스트 및 병목 확인
+  - Qwen3-TTS 기반 한국어 TTS API 테스트 및 연동
+  - 한국어 speaker `Sohee` 기반 WAV 파일 생성 확인
+  - 생성된 TTS 음성과 영상 합성 단계의 연결 문제 확인
 
 ## Tech Stack
 

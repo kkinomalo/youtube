@@ -5,39 +5,29 @@
 ```text
 이름: [Your Name]
 팀명: [Team Name]
-내가 맡은 역할: 로컬 LLM/TTS API 구축, 모델 리서치, API 배포 및 풀스택 연동 지원
+내가 맡은 역할: API 총괄 담당 / TTS 담당
 ```
 
 ## Tech Stack Badge
 
 `Python` `PowerShell` `Docker` `Ollama` `Qwen3` `Qwen3-TTS` `FastAPI-style API` `zrok` `GitHub`
 
-## Feature Log: 내가 구현한 핵심 기능
+## Feature Log: 내가 맡은 핵심 역할
 
-- 로컬 LLM 모델 리서치 및 최종 모델 선정
-  - 3B~4B급 로컬 LLM 후보를 비교했다.
-  - 최종적으로 `qwen3:4b`를 선택했다.
-  - Ollama를 이용해 `local-qwen-4b` alias로 서빙했다.
-
-- 로컬 LLM API 구성
+- API 총괄 담당
   - Ollama의 OpenAI 호환 API를 활용했다.
   - 프로젝트 wrapper API를 만들어 `/chat`, `/v1/chat/completions` 형태로 호출할 수 있게 구성했다.
   - PowerShell 실행 스크립트를 만들어 Windows 환경에서 바로 실행할 수 있도록 정리했다.
-
-- AI TTS 모델 적용
-  - 초기에는 Orpheus 3B Korean TTS를 테스트했다.
-  - 이후 속도와 시연 안정성을 고려해 `Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice`로 변경했다.
-  - 한국어 speaker인 `Sohee`를 사용해 `/tts` 요청 시 WAV 파일이 생성되도록 구성했다.
-
-- 외부 배포 및 풀스택 연동 준비
   - zrok을 이용해 로컬 API를 외부 public URL로 공유했다.
   - 풀스택 개발자가 사용할 수 있도록 API 명세를 정리했다.
   - `/health`, `/tts/voices`, `/tts`, `/chat`, `/chat/tts`, `/v1/chat/completions` 엔드포인트를 정리했다.
 
-- 문서화
-  - 모델 선정 이유를 정리했다.
+- TTS 담당
+  - 초기에는 Orpheus 3B Korean TTS를 테스트했다.
+  - 이후 속도와 시연 안정성을 고려해 `Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice`로 변경했다.
+  - 한국어 speaker인 `Sohee`를 사용해 `/tts` 요청 시 WAV 파일이 생성되도록 구성했다.
   - TTS 모델 교체 이유를 정리했다.
-  - 발표자료용 요약 문서와 풀스택 전달용 API 문서를 작성했다.
+  - 생성된 TTS 음성과 영상 합성 단계의 연결 문제를 확인하고 기록했다.
 
 ## Debug Log: 가장 어려웠던 점 / 해결 과정
 
