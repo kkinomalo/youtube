@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+webvenv/
+
+# Local model/runtime artifacts
+local-llm/qwen_models/
+local-llm/piper/
+local-llm/tts_output/
+local-llm/__pycache__/
+*.wav
+*.mp3
+*.aiff
+*.onnx
+*.gguf
+
+# Large/private challenge artifacts
+*.raw
+*.bin
+*.zip
+backup/
+extras/
+ctfd/
+board_activity_output/
+robocopy.log
+
+# Local secrets/config
+.env
+*.env
+zrok*.json

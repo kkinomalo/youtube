@@ -1,0 +1,18 @@
+services:
+  qwen3-tts:
+    container_name: qwen3-tts
+    build:
+      context: .
+      dockerfile: Dockerfile.qwen-tts
+    ports:
+      - "5010:5010"
+    environment:
+      QWEN_TTS_HOST: "0.0.0.0"
+      QWEN_TTS_PORT: "5010"
+      QWEN_TTS_MODEL: "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
+      QWEN_TTS_LANGUAGE: "Korean"
+      QWEN_TTS_VOICE: "Sohee"
+      QWEN_TTS_INSTRUCT: "Speak in Korean with a lively, expressive, slightly sassy YouTube narration tone."
+    volumes:
+      - ./qwen_models:/models
+    restart: unless-stopped
