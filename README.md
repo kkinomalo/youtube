@@ -10,7 +10,7 @@
 
 | 구분 | 사용 모델/도구 | 역할 |
 | --- | --- | --- |
-| Text LLM | `qwen3:4b` | 대화, 코드 분석, CTF 풀이 보조, 스크립트 작성 |
+| Text LLM | `qwen3:4b` | 대화, 스크립트 작성 |
 | LLM Runtime | Ollama | 로컬 LLM 실행 및 OpenAI 호환 API 제공 |
 | TTS Model | `Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice` | 한국어 음성 생성 |
 | TTS Speaker | `Sohee` | 한국어 female voice |
