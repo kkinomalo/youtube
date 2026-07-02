@@ -58,13 +58,9 @@
 
 각 씬의 대본과 이미지 프롬프트를 기반으로 숏츠용 이미지를 생성합니다.
 
-![씬별 이미지 생성 결과](docs/demo/04-image-result.png)
-
 ### 5. TTS, 자막, 영상 합성 결과
 
 씬별 TTS 음성 클립과 MP4/SRT 결과를 확인하는 단계입니다.
-
-![TTS 및 영상 합성 결과](docs/demo/05-video-tts-result.png)
 
 ## AI API 구성
 
